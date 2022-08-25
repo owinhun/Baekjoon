@@ -1,11 +1,12 @@
 t = int(input())
 
 for i in range(t):
-    OX = input()
-    s = list(OX)
+    OX = list(input())
+    
     sum = 0
     cnt = 1
-    for i in s:
+    
+    for i in OX:
         if i == 'O':
             sum += cnt
             cnt += 1
