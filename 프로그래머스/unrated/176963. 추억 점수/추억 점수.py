@@ -1,14 +1,12 @@
 def solution(name, yearning, photo):
     sum_list = []
-    dict = {}
-    for i, j in zip(name, yearning):
-        dict[i] = j
+    dict_ = dict(zip(name, yearning))
+
     for names in photo:
         sum_count = 0
-        for inside in names:
-            try:
-                sum_count += dict[inside]
-            except KeyError:
-                pass
+        for in_ in names:
+            if in_ in dict_:
+                sum_count += dict_[in_]
+
         sum_list.append(sum_count)
     return sum_list
