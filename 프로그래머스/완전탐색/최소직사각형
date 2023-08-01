@@ -1,0 +1,10 @@
+def solution(ss):
+    n_ss1 = []
+    n_ss2 = []
+    
+    for i in range(len(ss)):
+        n_ss1.append(max(ss[i]))
+        n_ss2.append(min(ss[i]))
+    result = max(n_ss1) * max(n_ss2)
+    
+    return result
