@@ -1,14 +1,11 @@
 import sys
 from collections import deque
 
-input = sys.stdin.readline
-output = sys.stdout.write
-
 n = int(input())
 q = deque()
 
 for _ in range(n):
-    command = input().split()
+    command = sys.stdin.readline().split()
 
     if command[0] == 'push_front':
         q.appendleft(int(command[1]))
@@ -18,33 +15,33 @@ for _ in range(n):
 
     elif command[0] == 'pop_front':
         if q:
-            output(str(q.popleft()) + '\n')
+            print(q.popleft())
         else:
-            output('-1\n')
+            print(-1)
 
     elif command[0] == 'pop_back':
         if q:
-            output(str(q.pop()) + '\n')
+            print(q.pop())
         else:
-            output('-1\n')
+            print(-1)
 
     elif command[0] == 'size':
-        output(str(len(q)) + '\n')
+        print(len(q))
 
     elif command[0] == 'empty':
         if q:
-            output('0\n')
+            print(0)
         else:
-            output('1\n')
+            print(1)
 
     elif command[0] == 'front':
         if q:
-            output(str(q[0]) + '\n')
+            print(q[0])
         else:
-            output('-1\n')
+            print(-1)
 
     elif command[0] == 'back':
         if q:
-            output(str(q[-1]) + '\n')
+            print(q[-1])
         else:
-            output('-1\n')
+            print(-1)
